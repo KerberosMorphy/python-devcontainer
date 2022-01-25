@@ -1,0 +1,104 @@
+{
+  "name": "Python 3",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    // Editor Configuration
+    "editor.rulers": [100, 110],
+    "files.autoSave": "afterDelay",
+    "files.trimTrailingWhitespace": true,
+    // Langage Base Configuration
+    "[python]": {
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      },
+      "editor.defaultFormatter": "ms-python.python",
+      "editor.detectIndentation": false,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 4
+    },
+    "[yaml]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml",
+      "editor.detectIndentation": false,
+      "editor.formatOnSave": true,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2
+    },
+    "[toml]": {
+      "editor.defaultFormatter": "be5invis.toml",
+      "editor.formatOnSave": true,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.detectIndentation": false,
+      "editor.formatOnSave": true,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.detectIndentation": false,
+      "editor.formatOnSave": true,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2
+    },
+    "yaml.format.singleQuote": false,
+    "yaml.format.printWidth": 100,
+    "prettier.printWidth": 100,
+    // Python Configuration
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.extraPaths": ["__pypackages__/3.9/lib"],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.useLibraryCodeForTypes": true,
+    "python.autoComplete.extraPaths": ["__pypackages__/3.9/lib"],
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "python.diagnostics.sourceMapsEnabled": true,
+    "python.formatting.blackArgs": ["--line-length=110", "--experimental-string-processing"],
+    "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+    "python.formatting.provider": "black",
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+    "python.sortImports.path": "/usr/local/py-utils/bin/isort",
+    // Extensions Configuration
+    "git.autofetch": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.temporaryFileName": "tempCodeFile",
+    "indentRainbow.errorColor": "rgba(128,32,32,0.1)",
+    "gitlens.integrations.enabled": true,
+    "todo-tree.general.tags": ["BUG", "FIXME", "TODO", "CLEANIT", "MAYBE", "[ ]", "[x]"]
+  },
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "wmaurer.change-case",
+    "formulahendry.code-runner",
+    "ms-azuretools.vscode-docker",
+    "gruntfuggly.todo-tree",
+    "eamodio.gitlens",
+    "oderwat.indent-rainbow",
+    "be5invis.toml",
+    "redhat.vscode-yaml",
+    "batisteo.vscode-django",
+    "esbenp.prettier-vscode"
+  ],
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "pdm sync",
+
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode"
+}
